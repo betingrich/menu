@@ -77,25 +77,43 @@
     .close-btn:hover {
         background: #00aaaa;
     }
-    .open-btn {
-        padding: 10px;
-        background: #333;
-        color: white;
+    .menu-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 25px;
+        background: transparent;
         border: none;
         cursor: pointer;
-        transition: background 0.3s ease;
     }
-    .open-btn:hover {
-        background: #575757;
+    .menu-btn div {
+        width: 30px;
+        height: 5px;
+        background: white;
+        transition: all 0.3s ease;
+    }
+    .menu-btn.open div:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+    .menu-btn.open div:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-btn.open div:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
     }
 </style>
 
 </head>
 <body>
-    <button class="open-btn" onclick="openSidebar()">Open Sidebar</button>
-    <div class="overlay" onclick="closeSidebar()"></div>
+    <button class="menu-btn" onclick="toggleSidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </button>
+    <div class="overlay" onclick="toggleSidebar()"></div>
     <div class="sidebar" id="sidebar">
-        <div class="close-btn" onclick="closeSidebar()">Close</div>
+        <div class="close-btn" onclick="toggleSidebar()">Close</div>
         <a href="#" onclick="toggleMenu('menu1')">Parent 1</a>
         <div class="submenu" id="menu1">
             <a href="#">Child 1</a>
@@ -111,15 +129,21 @@
             <p>Some insights into Child B's content.</p>
         </div>
     </div><script>
-    function openSidebar() {
-        document.getElementById("sidebar").style.left = "0";
-        document.querySelector(".overlay").style.display = "block";
-        document.body.style.background = "rgba(0,0,0,0.2)";
-    }
-    function closeSidebar() {
-        document.getElementById("sidebar").style.left = "-250px";
-        document.querySelector(".overlay").style.display = "none";
-        document.body.style.background = "";
+    function toggleSidebar() {
+        let sidebar = document.getElementById("sidebar");
+        let overlay = document.querySelector(".overlay");
+        let menuBtn = document.querySelector(".menu-btn");
+        if (sidebar.style.left === "0px") {
+            sidebar.style.left = "-250px";
+            overlay.style.display = "none";
+            document.body.style.background = "";
+            menuBtn.classList.remove("open");
+        } else {
+            sidebar.style.left = "0";
+            overlay.style.display = "block";
+            document.body.style.background = "rgba(0,0,0,0.2)";
+            menuBtn.classList.add("open");
+        }
     }
     function toggleMenu(id) {
         let menu = document.getElementById(id);
