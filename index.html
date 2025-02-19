@@ -4,82 +4,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Sidebar</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            transition: background 0.3s ease;
-            background: url('https://i.ibb.co/dsmC5jh1/mercedes.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            transition: opacity 0.3s ease;
-        }
-        .sidebar {
-            position: fixed;
-            left: -250px;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            background: #333;
-            color: white;
-            transition: left 0.3s ease;
-            padding-top: 20px;
-        }
-        .sidebar a {
-            display: block;
-            color: white;
-            padding: 10px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-        }
-        .sidebar a:hover {
-            background: #575757;
-        }
-        .submenu {
-            display: none;
-            padding-left: 15px;
-            transition: max-height 0.3s ease-in-out;
-            overflow: hidden;
-        }
-        .submenu a {
-            padding-left: 20px;
-            font-size: 14px;
-            color: #ddd;
-        }
-        .submenu p {
-            padding: 10px;
-            color: #bbb;
-            font-size: 12px;
-        }
-        .close-btn {
-            padding: 10px;
-            cursor: pointer;
-            background: red;
-            text-align: center;
-            transition: background 0.3s ease;
-        }
-        .close-btn:hover {
-            background: darkred;
-        }
-        .open-btn {
-            padding: 10px;
-            background: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-        .open-btn:hover {
-            background: #575757;
-        }
-    </style>
+        @keyframes neonGlow {
+            0% { box-shadow: 0 0 5px #ff00ff; }
+            25% { box-shadow: 0 0 10px #00ffff; }
+            50% { box-shadow: 0 0 15px #ff00ff; }
+            75% { box-shadow: 0 0 10px #00ffff; }
+            100% { box-shadow: 0 0 5px #ff00ff; }
+        }body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        transition: background 0.3s ease;
+        background: url('https://i.ibb.co/dsmC5jh1/mercedes.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+        transition: opacity 0.3s ease;
+    }
+    .sidebar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: #333;
+        color: white;
+        transition: left 0.3s ease;
+        padding-top: 20px;
+        border-right: 5px solid #ff00ff;
+        animation: neonGlow 2s infinite alternate;
+    }
+    .sidebar a {
+        display: block;
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+    }
+    .sidebar a:hover {
+        background: #575757;
+    }
+    .submenu {
+        display: none;
+        padding-left: 15px;
+        transition: max-height 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    .submenu a {
+        padding-left: 20px;
+        font-size: 14px;
+        color: #ddd;
+    }
+    .submenu p {
+        padding: 10px;
+        color: #bbb;
+        font-size: 12px;
+    }
+    .close-btn {
+        padding: 10px;
+        cursor: pointer;
+        background: cyan;
+        text-align: center;
+        transition: background 0.3s ease;
+        color: black;
+    }
+    .close-btn:hover {
+        background: #00aaaa;
+    }
+    .open-btn {
+        padding: 10px;
+        background: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .open-btn:hover {
+        background: #575757;
+    }
+</style>
+
 </head>
 <body>
     <button class="open-btn" onclick="openSidebar()">Open Sidebar</button>
