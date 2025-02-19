@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +7,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            transition: background 0.3s ease;
         }
         .overlay {
             position: fixed;
@@ -17,6 +17,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.5);
             display: none;
+            transition: opacity 0.3s ease;
         }
         .sidebar {
             position: fixed;
@@ -34,6 +35,7 @@
             color: white;
             padding: 10px;
             text-decoration: none;
+            transition: background 0.3s ease;
         }
         .sidebar a:hover {
             background: #575757;
@@ -41,12 +43,28 @@
         .submenu {
             display: none;
             padding-left: 15px;
+            transition: max-height 0.3s ease-in-out;
+            overflow: hidden;
+        }
+        .submenu a {
+            padding-left: 20px;
+            font-size: 14px;
+            color: #ddd;
+        }
+        .submenu p {
+            padding: 10px;
+            color: #bbb;
+            font-size: 12px;
         }
         .close-btn {
             padding: 10px;
             cursor: pointer;
             background: red;
             text-align: center;
+            transition: background 0.3s ease;
+        }
+        .close-btn:hover {
+            background: darkred;
         }
         .open-btn {
             padding: 10px;
@@ -54,6 +72,10 @@
             color: white;
             border: none;
             cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .open-btn:hover {
+            background: #575757;
         }
     </style>
 </head>
@@ -65,28 +87,33 @@
         <a href="#" onclick="toggleMenu('menu1')">Parent 1</a>
         <div class="submenu" id="menu1">
             <a href="#">Child 1</a>
+            <p>Some details about Child 1.</p>
             <a href="#">Child 2</a>
+            <p>More details about Child 2, including a description.</p>
         </div>
         <a href="#" onclick="toggleMenu('menu2')">Parent 2</a>
         <div class="submenu" id="menu2">
             <a href="#">Child A</a>
+            <p>Information about Child A and its relevance.</p>
             <a href="#">Child B</a>
+            <p>Some insights into Child B's content.</p>
         </div>
-    </div>
-    
-    <script>
-        function openSidebar() {
-            document.getElementById("sidebar").style.left = "0";
-            document.querySelector(".overlay").style.display = "block";
-        }
-        function closeSidebar() {
-            document.getElementById("sidebar").style.left = "-250px";
-            document.querySelector(".overlay").style.display = "none";
-        }
-        function toggleMenu(id) {
-            let menu = document.getElementById(id);
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        }
-    </script>
+    </div><script>
+    function openSidebar() {
+        document.getElementById("sidebar").style.left = "0";
+        document.querySelector(".overlay").style.display = "block";
+        document.body.style.background = "rgba(0,0,0,0.2)";
+    }
+    function closeSidebar() {
+        document.getElementById("sidebar").style.left = "-250px";
+        document.querySelector(".overlay").style.display = "none";
+        document.body.style.background = "";
+    }
+    function toggleMenu(id) {
+        let menu = document.getElementById(id);
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+</script>
+
 </body>
 </html>
