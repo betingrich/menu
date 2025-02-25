@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>BINGWA SOKONI</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+
   <!-- Favicons -->
   <link href="bingwastore/assets/img/favicon.png" rel="icon">
   <link href="bingwastore/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="bingwastore/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bingwastore/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="bingwastore/assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="bingwastore/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="bingwastore/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
   <!-- Main CSS File -->
   <link href="style.css" rel="stylesheet">
 </head>
+
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
       <a href="" class="logo d-flex align-items-center me-auto">
         <img src="https://files.catbox.moe/1yfmvo.jpg" alt="Bingwa Logo" class="logo-img">
+        <h1 class="sitename">Bingwa</h1>
       </a>
+
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href='#hourly data' class='active'>Hourly Data</a></li>
@@ -41,27 +49,114 @@
       </nav>
     </div>
   </header>
+
   <main class="main">
+    <!-- Welcome Note -->
     <div class="welcome-note">
       <h1 id="welcome-text"></h1>
     </div>
-    <!-- Data Sections -->
+
+    <!-- Hourly Data Section -->
     <section id="hourly data" class="pricing section light-background">
-      <!-- Content for Hourly Data -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Hourly Data</h2>
+        <p>Ensure that the details entered are correct before buying</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Pricing Items for Hourly Data -->
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>1.5GB, 3hrs</h3>
+              <h4><sup>Ksh</sup>48<span>.00</span></h4>
+              <div class="col-lg-12">
+                <form action="" id="myForm52636" method="post" data-aos="fade-up" data-aos-delay="200">
+                  <div class="row gy-4">
+                    <div class="col-md-12">
+                      <label for="paying_number" class="pb-2">Paying Number</label>
+                      <input type="number" name="paying_number" id="paying_number" class="form-control" required="">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="receiving_number" class="pb-2">Receiving Number</label>
+                      <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
+                    </div>
+                    <input type="hidden" name="amount" value="48">
+                    <input type="hidden" name="username" value="agentDennoh">
+                    <input type="hidden" name="productID" value="52636">
+                    <div id="52636"></div>
+                    <button type="submit" class="buy-btn" value="52636">Buy Now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other hourly data items -->
+        </div>
+      </div>
     </section>
+
+    <!-- Weekly Data Section -->
     <section id="weekly data" class="pricing section light-background">
-      <!-- Content for Weekly Data -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Weekly Data</h2>
+        <p>Ensure that the details entered are correct before buying</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Pricing Items for Weekly Data -->
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>350MB, 7 days</h3>
+              <h4><sup>Ksh</sup>49<span>.00</span></h4>
+              <div class="col-lg-12">
+                <form action="" id="myForm52637" method="post" data-aos="fade-up" data-aos-delay="200">
+                  <div class="row gy-4">
+                    <div class="col-md-12">
+                      <label for="paying_number" class="pb-2">Paying Number</label>
+                      <input type="number" name="paying_number" id="paying_number" class="form-control" required="">
+                    </div>
+                    <div class="col-md-12">
+                      <label for="receiving_number" class="pb-2">Receiving Number</label>
+                      <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
+                    </div>
+                    <input type="hidden" name="amount" value="49">
+                    <input type="hidden" name="username" value="agentDennoh">
+                    <input type="hidden" name="productID" value="52637">
+                    <div id="52637"></div>
+                    <button type="submit" class="buy-btn" value="52637">Buy Now</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other weekly data items -->
+        </div>
+      </div>
     </section>
-    <section id="daily data" class="pricing section light-background">
-      <!-- Content for Daily Data -->
-    </section>
-    <section id="weekly sms" class="pricing section light-background">
-      <!-- Content for Weekly Sms -->
-    </section>
-    <section id="daily sms" class="pricing section light-background">
-      <!-- Content for Daily Sms -->
-    </section>
+
+    <!-- Other Sections (Daily Data, Weekly Sms, Daily Sms) -->
+    <!-- Repeat the structure for other sections as needed -->
+
   </main>
-  <script src="script.js"></script>
+
+  <!-- JavaScript for Typing Effect -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const text = "Welcome to Bingwa Sokoni data deals.";
+      const welcomeText = document.getElementById("welcome-text");
+      let index = 0;
+
+      function typeWriter() {
+        if (index < text.length) {
+          welcomeText.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeWriter, 100);
+        }
+      }
+
+      typeWriter();
+    });
+  </script>
 </body>
-</html>
+
+            </html>
