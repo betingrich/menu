@@ -25,14 +25,18 @@
   <link href="bingwastore/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Main CSS File -->
-  <link href="style.css" rel="stylesheet">
+  <link href="bingwastore/assets/css/main.css" rel="stylesheet">
+
 </head>
 
 <body class="index-page">
+
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
       <a href="" class="logo d-flex align-items-center me-auto">
-        <img src="https://files.catbox.moe/1yfmvo.jpg" alt="Bingwa Logo" class="logo-img">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="bingwastore/assets/img/logo.png" alt=""> -->
         <h1 class="sitename">Bingwa</h1>
       </a>
 
@@ -47,24 +51,22 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
     </div>
   </header>
 
   <main class="main">
-    <!-- Welcome Note -->
-    <div class="welcome-note">
-      <h1 id="welcome-text"></h1>
-    </div>
-
-    <!-- Hourly Data Section -->
+    <!-- Data Section -->
+    
+    <!-- Begin Section -->
     <section id="hourly data" class="pricing section light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Hourly Data</h2>
         <p>Ensure that the details entered are correct before buying</p>
       </div>
+      
       <div class="container">
         <div class="row gy-4">
-          <!-- 1.5GB, 3hrs -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
               <h3>1.5GB, 3hrs</h3>
@@ -80,6 +82,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="48">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52636">
@@ -90,8 +93,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 1GB, 1hr -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
               <h3>1GB, 1hr</h3>
@@ -107,6 +108,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="19">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52638">
@@ -117,11 +119,9 @@
               </div>
             </div>
           </div>
-
-          <!-- 2GB, 1hr -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
-              <h3>2GB, 1hr</h3>
+              <h3>2gb,1hr</h3>
               <h4><sup>Ksh</sup>25<span>.00</span></h4>
               <div class="col-lg-12">
                 <form action="" id="myForm52645" method="post" data-aos="fade-up" data-aos-delay="200">
@@ -134,6 +134,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="25">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52645">
@@ -147,15 +148,17 @@
         </div>
       </div>
     </section>
-        <!-- Weekly Data Section -->
+    <!-- End Section -->
+
+    <!-- Begin Section -->
     <section id="weekly data" class="pricing section light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Weekly Data</h2>
         <p>Ensure that the details entered are correct before buying</p>
       </div>
+      
       <div class="container">
         <div class="row gy-4">
-          <!-- 350MB, 7 days -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
               <h3>350MB, 7 days</h3>
@@ -171,6 +174,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="49">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52637">
@@ -184,16 +188,17 @@
         </div>
       </div>
     </section>
+    <!-- End Section -->
 
-    <!-- Daily Data Section -->
+    <!-- Begin Section -->
     <section id="daily data" class="pricing section light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Daily Data</h2>
         <p>Ensure that the details entered are correct before buying</p>
       </div>
+      
       <div class="container">
         <div class="row gy-4">
-          <!-- 250MB, 24hrs -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
               <h3>250MB, 24hrs</h3>
@@ -209,6 +214,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="20">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52639">
@@ -219,8 +225,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 1GB, 24hrs -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
               <h3>1GB, 24hrs</h3>
@@ -236,6 +240,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="99">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52640">
@@ -246,8 +251,6 @@
               </div>
             </div>
           </div>
-
-          <!-- 1.25GB, till midnight -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
               <h3>1.25GB, till midnight</h3>
@@ -263,6 +266,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="55">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52641">
@@ -276,19 +280,20 @@
         </div>
       </div>
     </section>
+    <!-- End Section -->
 
-    <!-- Weekly Sms Section -->
+    <!-- Begin Section -->
     <section id="weekly sms" class="pricing section light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Weekly Sms</h2>
         <p>Ensure that the details entered are correct before buying</p>
       </div>
+      
       <div class="container">
         <div class="row gy-4">
-          <!-- 1,000sms, 7 days -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
-              <h3>1,000sms, 7 days</h3>
+              <h3>1,000sms, 7 day</h3>
               <h4><sup>Ksh</sup>30<span>.00</span></h4>
               <div class="col-lg-12">
                 <form action="" id="myForm52642" method="post" data-aos="fade-up" data-aos-delay="200">
@@ -301,6 +306,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="30">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52642">
@@ -314,16 +320,17 @@
         </div>
       </div>
     </section>
+    <!-- End Section -->
 
-    <!-- Daily Sms Section -->
+    <!-- Begin Section -->
     <section id="daily sms" class="pricing section light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Daily Sms</h2>
         <p>Ensure that the details entered are correct before buying</p>
       </div>
+      
       <div class="container">
         <div class="row gy-4">
-          <!-- 20sms, 1day -->
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
             <div class="pricing-item">
               <h3>20sms, 1day</h3>
@@ -339,6 +346,7 @@
                       <label for="receiving_number" class="pb-2">Receiving Number</label>
                       <input type="number" class="form-control" name="receiving_number" id="receiving_number" required="">
                     </div>
+                    <!-- Hidden Fields -->
                     <input type="hidden" name="amount" value="5">
                     <input type="hidden" name="username" value="agentDennoh">
                     <input type="hidden" name="productID" value="52643">
@@ -352,26 +360,19 @@
         </div>
       </div>
     </section>
+    <!-- End Section -->
+
   </main>
-  
-  <!-- JavaScript for Typing Effect -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const text = "Welcome to Bingwa Sokoni data deals.";
-      const welcomeText = document.getElementById("welcome-text");
-      let index = 0;
 
-      function typeWriter() {
-        if (index < text.length) {
-          welcomeText.innerHTML += text.charAt(index);
-          index++;
-          setTimeout(typeWriter, 100);
-        }
-      }
+  <!-- Vendor JS Files -->
+  <script src="bingwastore/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="bingwastore/assets/vendor/aos/aos.js"></script>
+  <script src="bingwastore/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="bingwastore/assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-      typeWriter();
-    });
-  </script>
+  <!-- Main JS File -->
+  <script src="bingwastore/assets/js/main.js"></script>
+
 </body>
 
-</html>
+  </html>
