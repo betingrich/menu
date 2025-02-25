@@ -1,48 +1,22 @@
 /* General Styles */
 body {
-  font-family: 'Poppins', sans-serif;
   background-color: #000; /* Black background */
   color: #fff; /* White text for contrast */
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
 }
 
+/* Header Styles */
 .header {
-  background-color: #222; /* Dark header */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  background-color: #111; /* Darker black for header */
+  padding: 20px 0;
 }
 
-.container-fluid {
-  padding: 0 20px;
-}
-
-.logo {
-  text-decoration: none;
-  color: #fff; /* White text for logo */
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-  margin-right: 10px;
-}
-
-.logo img:active {
-  transform: scale(1.5);
-}
-
-.sitename {
-  font-size: 1.5rem;
-  font-weight: bold;
+.header .logo h1 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
 }
 
 .navmenu ul {
@@ -50,166 +24,121 @@ body {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 15px; /* Reduced gap between menu items */
+  justify-content: center;
+}
+
+.navmenu ul li {
+  margin: 0 15px;
 }
 
 .navmenu ul li a {
+  color: #fff;
   text-decoration: none;
-  color: #fff; /* White text for menu */
-  font-weight: 500;
-  transition: color 0.3s ease;
+  font-weight: 600;
 }
 
-.navmenu ul li a:hover {
-  color: #007bff; /* Blue hover effect */
+.navmenu ul li a.active {
+  color: #4CAF50; /* Deep green for active links */
 }
 
-.mobile-nav-toggle {
-  display: none;
-}
-
-/* Welcome Note */
-.welcome-note {
+/* Section Styles */
+.section {
+  padding: 60px 0;
   text-align: center;
-  padding: 60px 20px 20px; /* Reduced padding */
-  background-color: transparent; /* Removed background */
-  color: white;
-}
-
-#welcome-text {
-  font-size: 2rem;
-  font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: white;
-  }
-}
-
-/* Pricing Section */
-.pricing {
-  padding: 40px 0; /* Reduced padding */
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 20px; /* Reduced margin */
 }
 
 .section-title h2 {
-  font-size: 1.75rem; /* Slightly smaller font size */
+  color: #4CAF50; /* Deep green for section titles */
+  font-size: 32px;
   margin-bottom: 10px;
-  color: #fff; /* White text for section titles */
 }
 
 .section-title p {
-  font-size: 0.9rem; /* Slightly smaller font size */
-  color: #ccc; /* Light gray text for section descriptions */
+  color: #ccc; /* Light gray for section descriptions */
+  font-size: 18px;
 }
 
+/* Pricing Item Styles */
 .pricing-item {
-  background: #222; /* Dark background for pricing items */
-  padding: 15px; /* Reduced padding */
+  background-color: #222; /* Dark gray for pricing items */
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
   text-align: center;
-  transition: transform 0.3s ease;
-  margin-bottom: 20px; /* Reduced margin between items */
-}
-
-.pricing-item:hover {
-  transform: translateY(-5px); /* Reduced hover effect */
 }
 
 .pricing-item h3 {
-  font-size: 1.25rem; /* Smaller font size */
+  color: #4CAF50; /* Deep green for pricing item titles */
+  font-size: 24px;
   margin-bottom: 10px;
-  color: #fff; /* White text for pricing item titles */
 }
 
 .pricing-item h4 {
-  font-size: 1.1rem; /* Smaller font size */
-  color: #007bff; /* Blue text for pricing */
-  margin-bottom: 15px; /* Reduced margin */
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .pricing-item h4 sup {
-  font-size: 0.7rem; /* Smaller font size */
-  color: #ccc; /* Light gray text for superscript */
+  font-size: 16px;
+  color: #ccc;
 }
 
-.pricing-item .form-control {
+.pricing-item h4 span {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Form Styles */
+.pricing-item form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pricing-item form .form-control {
   width: 100%;
-  padding: 8px; /* Reduced padding */
-  margin-bottom: 10px;
-  border: 2px solid #007bff; /* Blue border for input boxes */
+  max-width: 300px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #444;
   border-radius: 5px;
-  background-color: #333; /* Dark background for input boxes */
-  color: #fff; /* White text for input boxes */
+  background-color: #333;
+  color: #fff;
 }
 
-.pricing-item .form-control:focus {
-  border-color: #0056b3; /* Darker blue border on focus */
+.pricing-item form .form-control:focus {
   outline: none;
+  border-color: #4CAF50;
 }
 
-.buy-btn {
-  background-color: #007bff; /* Blue background for buttons */
-  color: white;
-  padding: 8px 16px; /* Reduced padding */
+.pricing-item form .buy-btn {
+  background-color: #4CAF50; /* Deep green for button */
+  color: #fff;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  display: block;
-  margin: 0 auto; /* Center the button */
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-.buy-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+.pricing-item form .buy-btn:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
 }
 
-/* Responsive Design */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navmenu ul {
-    display: none;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .mobile-nav-toggle {
-    display: block;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #fff; /* White color for mobile toggle */
-  }
-
-  .welcome-note {
-    padding: 40px 20px 20px; /* Reduced padding for mobile */
-  }
-
-  #welcome-text {
-    font-size: 1.5rem; /* Smaller font size for mobile */
+  .navmenu ul li {
+    margin: 10px 0;
   }
 
   .pricing-item {
-    margin-bottom: 15px; /* Reduced margin for mobile */
+    margin: 10px 0;
   }
 }
